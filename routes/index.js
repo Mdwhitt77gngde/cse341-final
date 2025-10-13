@@ -8,5 +8,7 @@ router.use('/', require('./swagger'));
 // mount resource routers
 router.use('/books', require('./books'));
 router.use('/authors', require('./authors'));
+router.use('/users', require('./users'));
+router.use('/projects', require('./projects'));
 
 module.exports = router;

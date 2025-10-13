@@ -61,6 +61,11 @@ async function run() {
           summary: 'A young boy\'s adventures on the Mississippi River.'
         }
       ]);
+      await db.collection('projects').insertMany([
+        { title: 'Website Redesign', description: 'Landing page refresh', ownerId: authorRes.insertedIds['0'], members: [], status: 'active', createdAt: new Date() },
+        { title: 'Drone API', description: 'Telemetry backend', ownerId: authorRes.insertedIds['1'], members: [], status: 'active', createdAt: new Date() }
+      ]);
+
 
       console.log('Inserting test user...');
       const plainPassword = 'Password123!';
